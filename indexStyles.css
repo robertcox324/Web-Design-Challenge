@@ -1,0 +1,183 @@
+ /* Dropdown Button */
+/* when the page is shrunk, maybe also shrink the widths of the buttons + adjust their fixed positions*/
+.dropbtn {
+  background-color: #4CAF50; /*FFFFFF is white, have to change text color after*/
+  color: white; /*text color*/
+  padding: 16px; /*the button's height above/below the text. so total along with font size is 48
+  ...or it should be, but it seems a bit more than 48 from the top since if the dropdown has top: 48 
+  it doesn't quite fit. Seems like 51 is the best fit for that*/
+  font-size: 16px;
+  border: none;
+  /*if you want it to be the same length as all the buttons
+  if not comment this line out*/
+  width: 160px;
+  position:fixed;
+  top: 0;
+  right: 320px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  /*position: absolute;*/
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  position:fixed;
+  right: 320px;
+  top: 51px;
+  /*definitely look into doing this better by making it relative to the dropdown's positioning
+but as of now making it relative to that makes it relative to where the dropdown's static position 
+would be */
+}
+
+.comparison{
+background-color: #4CAF50; 
+  color: white; 
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width:160px;
+  position:fixed;
+  right: 160px;
+  top: 0;
+  cursor:pointer 
+}
+.data{
+  background-color: #4CAF50; 
+  color: white; 
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width:160px;
+  position:fixed;
+  right: 0;
+  top: 0;
+  cursor:pointer
+}
+.home{
+  background-color: #4CAF50; 
+  color: white; 
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width:160px;
+  position:fixed;
+  left: 0;
+  top:0;
+  cursor:pointer	
+}
+.bar{
+  background-color: #4CAF50;  
+  height:51px;
+  width:100%;
+  border: none;
+  position:fixed;
+  top: 0;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/*test*/
+.element {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/*and the other buttons when they're hovered over*/
+.dropdown:hover .dropbtn {background-color: #3e8e4;} 
+
+.comparison:hover
+{background-color: #3e8e41;}
+.data:hover 
+{background-color: #3e8e41;}
+.home:hover 
+{background-color: #3e8e41;}
+
+.active {
+	/* background-color: #34e8eb; */
+}
+a.active:hover{
+	/* color: hotpink; */
+	/* background-color: hotpink; */
+}
+button.active:hover{
+}
+
+@media (max-width: 600px) {
+/* .comparison:hover */
+/* {background-color: #FFFFFF;} */
+/* .data:hover  */
+/* {background-color: #FFFFFF;} */
+/* .home:hover  */
+/* {background-color: #FFFFFF;} */
+	.bar{
+		display: none;
+	}
+	.home{
+		top:0;
+		width:100%;
+		border: 2px solid #000000;
+	}
+	.data{
+		top:52px;
+		width:100%;
+		border: 2px solid #000000;
+	}
+	.comparison{
+		top:104px;
+		width:100%;
+		right:0;
+		border: 2px solid #000000;
+	}
+	.dropbtn{
+		top:156px;
+		width:100%;
+		right:0;
+		border: 2px solid #000000;
+		/*make dropdown float around the buttons*/
+	}
+	.dropdown-content {
+	display: none;
+	background-color: #f1f1f1;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	position:fixed;
+	width:100%;
+	left:0px;
+	top: 210px;
+  /*definitely look into doing this better by making it relative to the dropdown's positioning
+but as of now making it relative to that makes it relative to where the dropdown's static position 
+would be */
+}
+	.container{
+		position:absolute;
+		top:186px;
+		z-index: -1;
+	}
+	/* .dropbtn, .dropdown, .dropdown-content */
+}
