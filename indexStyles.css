@@ -1,37 +1,31 @@
- /* Dropdown Button */
-/* when the page is shrunk, maybe also shrink the widths of the buttons + adjust their fixed positions*/
+/*Change the color and font of the entire page*/
 body {
 		background-color: #FFA62F; /*change background and text color for the body*/
 		color: #A25D00;
-		/* font-family: "Times New Roman", Times, serif; */
+		font-family: "Times New Roman", Times, serif;
 	}
+/*constructing the plots dropdown button*/
 .dropbtn {
-  /* background-color: #4CAF50; /*FFFFFF is white, have to change text color after*/ 
   background-color: #FF9200;
-  color: white; /*text color*/
-  padding: 13.5px; /*the button's height above/below the text. so total along with font size is 48
-  ...or it should be, but it seems a bit more than 48 from the top since if the dropdown has top: 48 
-  it doesn't quite fit. Seems like 51 is the best fit for that*/
+  color: white; 
+  padding: 13.5px; 
   font-size: 16px;
   border: none;
-  /*if you want it to be the same length as all the buttons
-  if not comment this line out*/
   width: 160px;
   position:fixed;
   top: 0;
   right: 320px;
 }
 
-/* The container <div> - needed to position the dropdown content */
+/*constructing the plots dropdown button*/
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/*constructing the plots dropdown button*/
 .dropdown-content {
   display: none;
-  /*position: absolute;*/
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -39,13 +33,10 @@ body {
   position:fixed;
   right: 320px;
   top: 51px;
-  /*definitely look into doing this better by making it relative to the dropdown's positioning
-but as of now making it relative to that makes it relative to where the dropdown's static position 
-would be */
 }
 
+/*comparison button*/
 .comparison{
-/* background-color: #4CAF50;  */
   background-color: #FF9200;
   color: white; 
   padding: 13.5px;
@@ -57,8 +48,8 @@ would be */
   top: 0;
   cursor:pointer 
 }
+/*data button*/
 .data{
-  /* background-color: #4CAF50;  */
   background-color: #FF9200;
   color: white; 
   padding: 13.5px;
@@ -70,13 +61,12 @@ would be */
   top: 0;
   cursor:pointer
 }
+/*home button*/
 .home{
-  /* background-color: #4CAF50;  */
-  /* background-color: #D27800; */
   background-color: #FF9200;
   color: white; 
   padding: 13.5px;
-  font-size: 16px; /* with bootstrap have to make this 13px to fit right */
+  font-size: 16px; 
   border: none;
   width:160px;
   position:fixed;
@@ -84,8 +74,8 @@ would be */
   top:0;
   cursor:pointer	
 }
+/*bar to make the navbar look nice*/
 .bar{
-  /* background-color: #4CAF50;   */
   background-color: #FF9200;
   height:51px;
   width:100%;
@@ -94,9 +84,11 @@ would be */
   cursor:default;
   top: 0;
 }
+/*make this work with bootstrap*/
 #bootstrap-override-bar {
 	cursor:default;
 }
+
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
@@ -105,53 +97,26 @@ would be */
   display: block;
 }
 
-/*test*/
-.element {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
-
-
-
-
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
-
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 /*and the other buttons when they're hovered over*/
-.dropdown:hover .dropbtn {background-color: #3e8e4;} 
+.dropdown:hover .dropbtn {background-color: #D27800;} 
 
+/*Change the color of the rest of the buttons on hover*/
 .comparison:hover
-/* {background-color: #3e8e41;} */
-	{background-color: #D27800;}
+{background-color: #D27800;}
 .data:hover 
 {background-color: #D27800;}
 .home:hover 
 {background-color: #D27800;}
 
-.active {
-	/* background-color: #34e8eb;  */
-}
-a.active:hover{
-	/* color: hotpink; */
-	background-color: hotpink;
-}
-button.active:hover{
-	/* background-color: #34e8eb;  */
-}
-
 @media (max-width: 768px) {
-/* .comparison:hover */
-/* {background-color: #FFFFFF;} */
-/* .data:hover  */
-/* {background-color: #FFFFFF;} */
-/* .home:hover  */
-/* {background-color: #FFFFFF;} */
+	/*adjust all the buttons when the screen is small*/
 	.bar{
 		display: none;
 	}
@@ -162,14 +127,12 @@ button.active:hover{
 		padding:11px;
 	}
 	.data{
-		/* top:52px; */
 		top:48px;
 		width:100%;
 		border: 2px solid #A25D00;
 		padding:11px;
 	}
 	.comparison{
-		/* top:104px; */
 		top:96px;
 		width:100%;
 		right:0;
@@ -177,13 +140,11 @@ button.active:hover{
 		padding:11px;
 	}
 	.dropbtn{
-		/* top:156px; */
 		top:144px;
 		width:100%;
 		right:0;
 		border: 2px solid #A25D00;
 		padding:11px;
-		/*make dropdown float around the buttons*/
 	}
 	.dropdown-content {
 	display: none;
@@ -193,40 +154,16 @@ button.active:hover{
 	position:fixed;
 	width:100%;
 	left:0px;
-	/* top: 209px; */
 	top:190px;
 	}
+	/*resize images when the screen is smaller*/
 	img.resizeImage {
 		width: 500px;
 		height:auto;
 	}
+	/*center text when it takes up an entire row for the smaller screens*/
 	.centertext{
 		text-align:center;
 	}
-	/* IMPORTANT: have to redo all this using bootstrap for the navbar instead for the assignment */
-  
-  /*definitely look into doing this better by making it relative to the dropdown's positioning
-but as of now making it relative to that makes it relative to where the dropdown's static position 
-would be */
 }
-	/* .top-buffer{ */
-		/* margin-top: 200px; /*this just does nothing?*/ */
-	/* } */
-	/* .Newcontainer{ */
-		/* position:absolute; */
-		/* top:186px; /*BOOTSTRAP COMPLETELY BREAKS THIS */ */
-		/* z-index: -1; */
-	/* } */
-	
-	/* .col-md-12{ */
-		/* position:absolute; */
-		/* z-index: -1; */
-	/* } */
-	/* #fix-bootstrap-text{ doesn't work lmao */
-		/* z-index: -1; */
-	/* } */
-	/* #bootstrap-override-container{ */
-		/* cursor: pointer; */
-	/* } */
-	/* .dropbtn, .dropdown, .dropdown-content */
-}
+
