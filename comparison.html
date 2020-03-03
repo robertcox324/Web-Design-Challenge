@@ -3,29 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <title>Media Query Example</title>
-  <link rel="stylesheet" href="indexStyles.css"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="indexStyles.css">
 </head>
-<button class="bar">
+<body>
+<div class="container"> 
+ <div class="row">	
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+ </div>
+ <div class="row">
+    <div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+ </div>
+ <div class="row">
+	<div class="centertext col-xs-12">
+		<h1>Comparison: Latitude vs X</h1>
+		<p>Click on any plot to get an indepth analysis</p>
+	</div>
+ </div>
+ <div class="row">
+	<div class="col-xs-12 col-md-6">
+		<a href="maxTemp.html">
+		<img class="resizeImage" src="Resources/assets/images/Fig1.png" alt="Temperature plot" width="600" height="413">
+		</a>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<a href="humidity.html">
+		<img class="resizeImage" src="Resources/assets/images/Fig2.png" alt="Humidity plot" width="600" height="413"><!-- style image here-->
+		</a>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col-xs-12 col-md-6">
+		<a href="cloudiness.html">
+		<img class="resizeImage" src="Resources/assets/images/Fig3.png" alt="Cloudiness plot" width="600" height="413">
+		</a>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<a href="windspeed.html">
+		<img class="resizeImage" src="Resources/assets/images/Fig4.png" alt="Wind Speed plot" width="600" height="413"><!-- style image here-->
+		</a>
+	</div>
+  </div>
+  </div>
+      <button id="bootstrap-override-bar" class="bar">
 	  
 	  </button>
-	  <button class="home" onclick="window.location.href='index.html';">
-	    home test lmao
+	  <button class="home active" onclick="window.location.href='index.html';">
+	    Home
 	  </button>
 	  <div class="dropdown">
-		 <button class="dropbtn">Plots</button>
+		 <button id="bootstrap-override-bar" class="dropbtn">Plots</button>
 		   <div class="dropdown-content">
 		     <a href="humidity.html">Humidity</a>
 		     <a href="maxTemp.html">Max Temperature</a>
 		     <a href="cloudiness.html">Cloudiness</a>
-			 <a href="windspeed.html">Windspeed</a>
+			 <a href="windspeed.html">Wind Speed</a>
 	       </div>
 	   </div>
 	   <button class="comparison" onclick="window.location.href='comparison.html';">
-	     comp test lmao
+	     Comparison
 	   </button>
 	   <button class="data" onclick="window.location.href='data.html';">
-	     data test lmao
+	     Data
 	   </button>
-<div class="container">
-<h1>comparisons</h1> 
-</div>
+</body>
+</html>

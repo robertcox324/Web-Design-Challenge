@@ -1,9 +1,15 @@
  /* Dropdown Button */
 /* when the page is shrunk, maybe also shrink the widths of the buttons + adjust their fixed positions*/
+body {
+		background-color: #FFA62F; /*change background and text color for the body*/
+		color: #A25D00;
+		/* font-family: "Times New Roman", Times, serif; */
+	}
 .dropbtn {
-  background-color: #4CAF50; /*FFFFFF is white, have to change text color after*/
+  /* background-color: #4CAF50; /*FFFFFF is white, have to change text color after*/ 
+  background-color: #FF9200;
   color: white; /*text color*/
-  padding: 16px; /*the button's height above/below the text. so total along with font size is 48
+  padding: 13.5px; /*the button's height above/below the text. so total along with font size is 48
   ...or it should be, but it seems a bit more than 48 from the top since if the dropdown has top: 48 
   it doesn't quite fit. Seems like 51 is the best fit for that*/
   font-size: 16px;
@@ -39,9 +45,10 @@ would be */
 }
 
 .comparison{
-background-color: #4CAF50; 
+/* background-color: #4CAF50;  */
+  background-color: #FF9200;
   color: white; 
-  padding: 16px;
+  padding: 13.5px;
   font-size: 16px;
   border: none;
   width:160px;
@@ -51,9 +58,10 @@ background-color: #4CAF50;
   cursor:pointer 
 }
 .data{
-  background-color: #4CAF50; 
+  /* background-color: #4CAF50;  */
+  background-color: #FF9200;
   color: white; 
-  padding: 16px;
+  padding: 13.5px;
   font-size: 16px;
   border: none;
   width:160px;
@@ -63,10 +71,12 @@ background-color: #4CAF50;
   cursor:pointer
 }
 .home{
-  background-color: #4CAF50; 
+  /* background-color: #4CAF50;  */
+  /* background-color: #D27800; */
+  background-color: #FF9200;
   color: white; 
-  padding: 16px;
-  font-size: 16px;
+  padding: 13.5px;
+  font-size: 16px; /* with bootstrap have to make this 13px to fit right */
   border: none;
   width:160px;
   position:fixed;
@@ -75,12 +85,17 @@ background-color: #4CAF50;
   cursor:pointer	
 }
 .bar{
-  background-color: #4CAF50;  
+  /* background-color: #4CAF50;   */
+  background-color: #FF9200;
   height:51px;
   width:100%;
   border: none;
   position:fixed;
+  cursor:default;
   top: 0;
+}
+#bootstrap-override-bar {
+	cursor:default;
 }
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -112,23 +127,25 @@ background-color: #4CAF50;
 .dropdown:hover .dropbtn {background-color: #3e8e4;} 
 
 .comparison:hover
-{background-color: #3e8e41;}
+/* {background-color: #3e8e41;} */
+	{background-color: #D27800;}
 .data:hover 
-{background-color: #3e8e41;}
+{background-color: #D27800;}
 .home:hover 
-{background-color: #3e8e41;}
+{background-color: #D27800;}
 
 .active {
-	/* background-color: #34e8eb; */
+	/* background-color: #34e8eb;  */
 }
 a.active:hover{
 	/* color: hotpink; */
-	/* background-color: hotpink; */
+	background-color: hotpink;
 }
 button.active:hover{
+	/* background-color: #34e8eb;  */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 /* .comparison:hover */
 /* {background-color: #FFFFFF;} */
 /* .data:hover  */
@@ -141,24 +158,31 @@ button.active:hover{
 	.home{
 		top:0;
 		width:100%;
-		border: 2px solid #000000;
+		border: 2px solid #A25D00;
+		padding:11px;
 	}
 	.data{
-		top:52px;
+		/* top:52px; */
+		top:48px;
 		width:100%;
-		border: 2px solid #000000;
+		border: 2px solid #A25D00;
+		padding:11px;
 	}
 	.comparison{
-		top:104px;
+		/* top:104px; */
+		top:96px;
 		width:100%;
 		right:0;
-		border: 2px solid #000000;
+		border: 2px solid #A25D00;
+		padding:11px;
 	}
 	.dropbtn{
-		top:156px;
+		/* top:156px; */
+		top:144px;
 		width:100%;
 		right:0;
-		border: 2px solid #000000;
+		border: 2px solid #A25D00;
+		padding:11px;
 		/*make dropdown float around the buttons*/
 	}
 	.dropdown-content {
@@ -169,15 +193,40 @@ button.active:hover{
 	position:fixed;
 	width:100%;
 	left:0px;
-	top: 210px;
+	/* top: 209px; */
+	top:190px;
+	}
+	img.resizeImage {
+		width: 500px;
+		height:auto;
+	}
+	.centertext{
+		text-align:center;
+	}
+	/* IMPORTANT: have to redo all this using bootstrap for the navbar instead for the assignment */
+  
   /*definitely look into doing this better by making it relative to the dropdown's positioning
 but as of now making it relative to that makes it relative to where the dropdown's static position 
 would be */
 }
-	.container{
-		position:absolute;
-		top:186px;
-		z-index: -1;
-	}
+	/* .top-buffer{ */
+		/* margin-top: 200px; /*this just does nothing?*/ */
+	/* } */
+	/* .Newcontainer{ */
+		/* position:absolute; */
+		/* top:186px; /*BOOTSTRAP COMPLETELY BREAKS THIS */ */
+		/* z-index: -1; */
+	/* } */
+	
+	/* .col-md-12{ */
+		/* position:absolute; */
+		/* z-index: -1; */
+	/* } */
+	/* #fix-bootstrap-text{ doesn't work lmao */
+		/* z-index: -1; */
+	/* } */
+	/* #bootstrap-override-container{ */
+		/* cursor: pointer; */
+	/* } */
 	/* .dropbtn, .dropdown, .dropdown-content */
 }

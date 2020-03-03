@@ -3,29 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <title>Media Query Example</title>
-  <link rel="stylesheet" href="indexStyles.css"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="indexStyles.css">
 </head>
-<button class="bar">
+<body>
+<div class="container"> 
+ <div class="row">	
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+ </div>
+ <div class="row">
+    <div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+	<div class="col-sm-12 col-md-2">
+	SPACING
+	</div>
+ </div>
+ <div class="row">
+	<div class="centertext col-xs-12 col-md-6">
+	<h1>Humidity</h1>
+	<p>The plot on this page displays the correlation of a city's latitude to the
+	humidity it experienced on the particular date the data was gathered. 
+	Humidity and latitudinal location do not appear strongly correlated at all.
+	Citites any distance from the equater are just as able to have high or low humidity
+	as any other distance. Of the two extremes to humidity, a city is much more likely to be
+	uncomfortably humid (60-100%) than uncomfortably dry (0-20%)</p>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<img class="resizeImage" src="Resources/assets/images/Fig2.png" alt="Humidity plot"><!-- style image here-->
+	</div>
+  </div>
+  </div>
+      <button id="bootstrap-override-bar" class="bar">
 	  
 	  </button>
-	  <button class="home" onclick="window.location.href='index.html';">
-	    home test lmao
+	  <button class="home active" onclick="window.location.href='index.html';">
+	    Home
 	  </button>
 	  <div class="dropdown">
-		 <button class="dropbtn">Plots</button>
+		 <button id="bootstrap-override-bar" class="dropbtn">Plots</button>
 		   <div class="dropdown-content">
 		     <a href="humidity.html">Humidity</a>
 		     <a href="maxTemp.html">Max Temperature</a>
 		     <a href="cloudiness.html">Cloudiness</a>
-			 <a href="windspeed.html">Windspeed</a>
+			 <a href="windspeed.html">Wind Speed</a>
 	       </div>
 	   </div>
 	   <button class="comparison" onclick="window.location.href='comparison.html';">
-	     comp test lmao
+	     Comparison
 	   </button>
 	   <button class="data" onclick="window.location.href='data.html';">
-	     data test lmao
+	     Data
 	   </button>
-<div class="container">
-<h1>humidity</h1>
-</div>
+</body>
+</html>
